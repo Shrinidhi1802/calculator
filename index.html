@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center ;">
+    <input placeholder="enter first number" id="num1"><br><br>
+    <input placeholder="enter second number" id="num2"><br><br>
+    <button id="submit" value="submit" onclick=my_add()> Add </button><br><br>
+    <button id="submit" value="submit" onclick=my_sub()> Subtract </button><br><br>
+    <button id="submit" value="submit" onclick=my_mult()> Multiply </button><br><br>
+    <button id="submit" value="submit" onclick=my_div()> Divide </button><br><br>
+    <div id="result">0 
+    </div>
+  
+
+    
+    
+    <script>
+        function my_add(){
+            var x=parseFloat(document.getElementById('num1').value);
+            var y=parseFloat(document.getElementById('num2').value);
+            console.log(x);
+            console.log(y);
+            var z= x+y;
+            var result=z.toFixed(2)
+            document.getElementById("result").innerHTML=result;
+
+            
+
+        }
+        function my_sub(){
+            var x=parseFloat(document.getElementById('num1').value);
+            var y=parseFloat(document.getElementById('num2').value);
+            var sub=x-y;
+            var r=sub.toFixed(2)
+            document.getElementById("result").innerHTML=r;
+            console.log(sub);
+
+
+            
+        }
+        function my_mult(){
+            var x=parseFloat(document.getElementById('num1').value);
+            var y=parseFloat(document.getElementById('num2').value);
+            mult=x*y;
+            console.log(mult);
+            var q=mult.toFixed(2)
+            document.getElementById("result").innerHTML=q;
+        }
+        function my_div(){
+            var x=parseFloat(document.getElementById('num1').value);
+            var y=parseFloat(document.getElementById('num2').value);
+            c=x/y;
+            console.log(c);
+            var m=c.toFixed(2)
+            document.getElementById("result").innerHTML=m
+
+        }
+
+    </script>
+</body>
+</html>
